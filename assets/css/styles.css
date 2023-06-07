@@ -272,6 +272,17 @@ img {
   border-radius: .5rem;
 }
 
+
+/* ===== RESEARCH =====*/
+.research__container {
+  width: 60%;
+  margin-left:20%;
+  margin-right:20%;
+  text-align: center;
+}
+
+
+
 /* ===== SKILLS =====*/
 .skills__container {
   row-gap: 2rem;
@@ -377,6 +388,7 @@ img {
   font-size: var(--normal-font-size);
   cursor: pointer;
   margin-left: auto;
+
 }
 
 /* ===== FOOTER =====*/
