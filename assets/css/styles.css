@@ -268,7 +268,7 @@ img {
 }
 
 .home__handle {
-  width: 290px;
+  width: 285px;
   height: 350px;
   background: linear-gradient(
     180deg,
@@ -278,6 +278,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  border-radius: 10rem 10rem 1rem 1rem;
   overflow: hidden;
 }
 
