@@ -282,6 +282,69 @@ img {
   overflow: hidden;
 }
 
+.home__buttons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.home__social,
+.home__scroll{
+	position: absolute;
+}
+
+.home__social{
+	bottom: 5rem;
+	 left: 1rem;
+  	bottom: 5rem;
+  	display: grid;
+  	row-gap: .5rem;
+}
+
+.home__social-link{
+	width: max-content;
+	background-color: var(--container-color);
+	color: var(--first-color);
+	pagging: .25rem;
+	displayL flex;
+	font-size: 1rem;
+	transition: .4s;
+}
+
+.home__social-link:hover{
+	background-color: var(--first-color);
+	color: #fff;
+}
+
+.home__social::after{
+	content: '';
+	width: 32px;
+	geight: 2px;
+	background-color: var(--first-color);
+	transform: rotate(90deg) translate (16px. 3px)
+}
+
+.home__scroll{
+	position: absolute;
+ 	right: 0.25rem;
+  	bottom: 4rem;
+  	display: grid;
+  	row-gap: 2.25rem;
+  	justify-items: center;
+  	color: var(--first-color);
+}
+
+.home__scroll-icon{
+	font-size: 1.25rem;
+}
+
+.home__scroll-name{
+	font-size: var(--smaller-font-size);
+	transform: rotate(-90deg);
+}
+
+
 /*=============== BUTTONS ===============*/
 
 
