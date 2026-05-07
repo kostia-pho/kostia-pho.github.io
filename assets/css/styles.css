@@ -172,7 +172,7 @@ img {
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
-  aligh-items: center;
+  align-items: center;
 }
 
 .nav_logo{
