@@ -175,17 +175,17 @@ img {
   align-items: center;
 }
 
-.nav_logo{
+.nav__logo{
   color: var(--first-color);
   font-weight: var(--font-medium);
   transition: .4s;
 }
 
-.nav_logo:hover{
+.nav__logo:hover{
   color: var(--first-color-alt);
 }
 
-.nav_menu{
+.nav__menu{
   position: fixed;
   bottom: 1rem;
   background-color: hsla(var(--second-hue), 32%, 16%, .8)
@@ -195,13 +195,13 @@ img {
   backdrop-filter: blur(10px);
 }
 
-.nav_list{
+.nav__list{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav_link{
+.nav__link{
   color: var(--text-color);
   font-size: 1.25rem;
   padding: .4rem;
