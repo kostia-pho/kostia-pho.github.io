@@ -118,4 +118,35 @@ themeButton.addEventListener('click', () => {
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  reset: false
+});
 
+sr.reveal('.home__greeting', { delay: 100 });
+sr.reveal('.home__name', { delay: 200 });
+sr.reveal('.home__education', { delay: 300 });
+sr.reveal('.home__buttons', { delay: 400 });
+sr.reveal('.home__handle', { delay: 500 });
+sr.reveal('.home__social', { delay: 600, origin: 'bottom' });
+sr.reveal('.home__scroll', { delay: 700, origin: 'bottom'});
+
+sr.reveal('.about__img', { });
+sr.reveal('.about__box', { interval: 100 });
+sr.reveal('.about__description', { delay: 200 });
+sr.reveal('.about .button', { delay: 300 });
+
+sr.reveal('.skills__title', {});
+sr.reveal('.skills__content', { interval: 150 });
+sr.reveal('.skills__data', { interval: 50 });
+
+sr.reveal('.services__card', { interval: 150 });
+
+sr.reveal('.work__filters', { delay: 100 });
+sr.reveal('.work__card', { interval: 150 });
+
+sr.reveal('.contact__card', { interval: 150 });
+	
