@@ -209,7 +209,7 @@ body.light-theme{
 }
 
 .main {
-  overflow: hidden;
+  overflow: clip;
 }
 
 .section {
@@ -693,12 +693,14 @@ body.light-theme{
 
 /*=============== WORK ===============*/
 
-.work__containers{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
-	justify-content: center;
-	gap: 2rem;
-	padding-top: 1rem;
+.work__containers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1400px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 1rem;
 }
 
 .work__filters{
@@ -1112,9 +1114,9 @@ body.light-theme{
     padding: 2rem 1.5rem; /* optional nicer spacing */
   }
 
- 	.work__container{
-		gap: 3rem;
-	}
+ .work__containers {
+    grid-template-columns: repeat(4, 1fr);
+}
 
 	.work{
 		padding: 1.25rem;
