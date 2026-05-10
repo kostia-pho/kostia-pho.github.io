@@ -33,11 +33,26 @@ modalClose.forEach((closeBtn) => {
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 
+let mixerPortfolio = mixitup ('.work__containers', {
+	selectors: {
+		target: '.work__card'
+	},
+	animation: {
+		duration: 300
+	}
+});
+
 
 /* Link active work */ 
 
+const linkWork = document.querySelectorAll('.work__items')
 
-/*=============== SWIPER TESTIMONIAL ===============*/
+function activeWork(){
+	linkWork.forEach(l => l.classList.remove('active__work'))
+	this.classList.add('active__work')
+}
+
+linkWork.forEach(l => l.addEventListener('click', activeWork))
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
