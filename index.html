@@ -174,7 +174,7 @@ A seasoned translator, copywriter and editor with over 10 years of experience an
 
                         <div>
                             <h3 class="skills__name">Python</h3>
-                            <span class="skills__level">Advanced</span>
+                            <span class="skills__level">Intermediate</span>
                         </div>
                     </div>
 
@@ -455,25 +455,126 @@ A seasoned translator, copywriter and editor with over 10 years of experience an
 		<span class="section__subtitle"></span>
 		<h2 class="section__title">Portfolio</h2>
 
-		<div>
+		<div class="work__filters">
+			<span class="work__items active__work" data-filter='all'>All</span>
+			<span class="work__items" data-filter='.research'>Research & Academic Publications</span>
+			<span class="work__items" data-filter='.publication'>Media Publications</span>
+			<span class="work__items" data-filter='.freelance'>Freelance Work</span>
 		</div>
-                
-            </section>
 
-            <!--=============== TESTIMONIALS ===============-->
-            <section class="testimonial section">
+		<div class="work__containers">
+			<div class="work__card mix research">
+				<img src="assets/img/Stock Academic Overlay.png" alt="class" class="work__img"> 
+
+				<h3 class="work__title">Research & Academic Publications</h3>	
+				
+				<a href="#" class="work__button">
+					Demo <i class="bi bi-arrow-right services__icon work__icon"></i>
+				</a>	
+			</div>				
+
+			<div class="work__card mix publication">
+				<img src="assets/img/Stock Publication Overlay.png" alt="class" class="work__img"> 
+
+				<h3 class="work__title">Media Publications</h3>	
+				
+				<a href="#" class="work__button">
+					Demo <i class="bi bi-arrow-right services__icon work__icon"></i>
+				</a>	
+			</div>	
+
+			<div class="work__card mix freelance">
+				<img src="assets/img/Stock Freelance Overlay.png" alt="class" class="work__img"> 
+
+				<h3 class="work__title">Freelance Work</h3>	
+				
+				<a href="#" class="work__button">
+					Demo <i class="bi bi-arrow-right services__icon work__icon"></i>
+				</a>	
+			</div>	
+		</div>		
                 
             </section>
 
             <!--=============== CONTACT ===============-->
-            <section class="contact section" id="contact">
-                
-            </section>
+           <section class="contact section" id="contact">
+
+  <span class="section__subtitle"></span>
+  <h2 class="section__title">Get In Touch</h2>
+
+  <div class="contact__container container">
+
+    <div class="contact__card">
+      <i class="bi bi-envelope contact__card-icon"></i>
+      <h3 class="contact__card-title">Email</h3>
+
+      <a href="mailto:kostia.pho@gmail.com" target="_blank" class="contact__button">
+        Drop me a line<i class="bi bi-arrow-right contact__button-icon"></i>
+      </a>
+    </div>
+
+    <div class="contact__card">
+      <i class="bi bi-linkedin contact__card-icon"></i>
+      <h3 class="contact__card-title">LinkedIn</h3>
+
+      <a href="https://www.linkedin.com/in/kostia-pho/" target="_blank" class="contact__button">
+        Connect with me <i class="bi bi-arrow-right contact__button-icon"></i>
+      </a>
+    </div>
+
+    <div class="contact__card">
+      <i class="bi bi-github contact__card-icon"></i>
+      <h3 class="contact__card-title">GitHub</h3>
+
+      <a href="https://github.com/kostia-pho" target="_blank" class="contact__button">
+        Follow me <i class="bi bi-arrow-right contact__button-icon"></i>
+      </a>
+    </div>
+
+  </div>
+
+</section>
         </main>
 
         <!--=============== FOOTER ===============-->
         <footer class="footer">
-            
+
+	<div class="footer__container container">
+		<h1 class="footer__title">Kostia Pho</h1>
+		
+		<ul class="footer__list">
+			<li>
+				<a href="#about" class="footer__link">About</a>
+			</li>
+
+			<li>
+				<a href="#skills" class="footer__link">Services</a>
+			</li>
+
+			<li>
+				<a href="#work" class="footer__link">Portfolio</a>
+			</li>
+		</ul>
+
+		<ul class="footer__social">
+			<a href="https://www.linkedin.com/in/kostia-pho/" target="_blank" class="footer__social-link">
+				<i class="bi bi-linkedin"></i>
+			</a>
+
+			<a href="https://github.com/kostia-pho" target="_blank" class="footer__social-link">
+				<i class="bi bi-github"></i>
+			</a>
+
+			<a href="https://www.researchgate.net/profile/Kostia-Pho" target="_blank" class="footer__social-link">
+				<i class="bi bi-link-45deg"></i>
+			</a>
+		</ul>
+
+		<span class="footer__copy">
+			&#169; Kostia Pho. All rights reserved.
+		</span>
+	</div>            
+
         </footer>
 
         <!--=============== SCROLLREVEAL ===============-->
@@ -483,7 +584,7 @@ A seasoned translator, copywriter and editor with over 10 years of experience an
         <script src=""></script>
 
         <!--=============== MIXITUP FILTER ===============-->
-        <script src=""></script>
+        <script src="assets/js/mixitup.min.js"></script>
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
