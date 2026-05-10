@@ -13,9 +13,14 @@
         Pink: hsl(356, 66%, 75%)
         Teal: hsl(174, 63%, 62%)
   */
-  --first-hue: 250;
-  --sat: 66%;
-  --lig: 75%;
+  */original bdimcode colours (purple) --first-hue: 250; --sat: 66%; --lig: 75%;
+  */alt colours (green) --first-hue: 115; --sat: 16.3%; --lig: 53.2%;
+  */alt colours (DSMA teal) --first-hue: 175; --sat: 60%;--lig: 42%;
+  */alt colours (steel grey) --first-hue: 210; --sat: 10%;--lig: 60%;
+
+  --first-hue: 210;
+  --sat: 10%;
+  --lig: 60%;
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
