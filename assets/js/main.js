@@ -84,37 +84,52 @@ function scrollActive() {
 
 window.addEventListener('scroll', scrollActive)
 
-/*=============== LIGHT DARK THEME ===============*/ 
+/*=============== LIGHT DARK THEME ===============*/
 
 const themeButton = document.getElementById('theme-button')
 const lightTheme = 'light-theme'
 const iconTheme = 'bx-sun'
 
-// Previously selected topic (if user selected)
+// Previously selected theme, if any
 const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
+// Get current theme
+const getCurrentTheme = () =>
+    document.body.classList.contains(lightTheme) ? 'light' : 'dark'
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](lightTheme)
-  themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
+// Get current icon
+const getCurrentIcon = () =>
+    themeButton.classList.contains(iconTheme) ? 'bx-sun' : 'bx-moon'
+
+
+// DEFAULT = LIGHT MODE
+// If the user has previously selected dark mode, use dark mode.
+// Otherwise, use light mode.
+if (selectedTheme === 'dark') {
+    document.body.classList.remove(lightTheme)
+} else {
+    document.body.classList.add(lightTheme)
 }
 
-// Activate / deactivate the theme manually with the button
+// Set the correct icon
+if (selectedTheme === 'dark') {
+    themeButton.classList.add(iconTheme)
+} else {
+    themeButton.classList.remove(iconTheme)
+}
+
+
+// Activate / deactivate theme with the button
 themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
+
     document.body.classList.toggle(lightTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
+
+    // Save the user's preference
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
-
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
