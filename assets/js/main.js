@@ -88,47 +88,53 @@ window.addEventListener('scroll', scrollActive)
 
 const themeButton = document.getElementById('theme-button')
 const lightTheme = 'light-theme'
-const iconTheme = 'bx-sun'
 
-// Previously selected theme, if any
+// Previously selected theme
 const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
 
 // Get current theme
 const getCurrentTheme = () =>
     document.body.classList.contains(lightTheme) ? 'light' : 'dark'
 
-// Get current icon
-const getCurrentIcon = () =>
-    themeButton.classList.contains(iconTheme) ? 'bx-sun' : 'bx-moon'
-
 
 // DEFAULT = LIGHT MODE
-// If the user has previously selected dark mode, use dark mode.
-// Otherwise, use light mode.
+// Use dark mode only if the user previously selected it
 if (selectedTheme === 'dark') {
     document.body.classList.remove(lightTheme)
 } else {
     document.body.classList.add(lightTheme)
 }
 
-// Set the correct icon
-if (selectedTheme === 'dark') {
-    themeButton.classList.add(iconTheme)
+
+// Set correct icon
+if (getCurrentTheme() === 'light') {
+    themeButton.classList.remove('bx-sun')
+    themeButton.classList.add('bx-moon')
 } else {
-    themeButton.classList.remove(iconTheme)
+    themeButton.classList.remove('bx-moon')
+    themeButton.classList.add('bx-sun')
 }
 
 
-// Activate / deactivate theme with the button
+// Activate / deactivate theme
 themeButton.addEventListener('click', () => {
 
+    // Toggle theme
     document.body.classList.toggle(lightTheme)
-    themeButton.classList.toggle(iconTheme)
 
-    // Save the user's preference
+    // Update icon
+    if (getCurrentTheme() === 'light') {
+        // Light mode → moon
+        themeButton.classList.remove('bx-sun')
+        themeButton.classList.add('bx-moon')
+    } else {
+        // Dark mode → sun
+        themeButton.classList.remove('bx-moon')
+        themeButton.classList.add('bx-sun')
+    }
+
+    // Save user's preference
     localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
 
